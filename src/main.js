@@ -1,15 +1,31 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
-import store from './store'
-import Vuelidate from 'vuelidate'
+import VueRouter from 'vue-router'
+import AboutPage from './components/AboutPage.vue'
+import Travelpage from './components/Travelpage.vue'
+import TravelAmericaPage from './components/TravelAmericaPage.vue'
+import TravelChinaPage from './components/TravelChinaPage.vue'
 
-Vue.use(Vuelidate)
-Vue.use(store)
-Vue.config.productionTip = false
+Vue.use(VueRouter)
+
+const routes = [
+  {
+    path: '/travel',
+    component: Travelpage,
+    children: [
+      { path: '/travel/america', component: TravelAmericaPage },
+      { path: '/travel/china', component: TravelChinaPage }
+    ]
+  },
+  {
+    path: '/about', component: AboutPage
+  }
+]
+const router = new VueRouter({
+  routes
+})
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+  render: h => h(App),
+  router
 }).$mount('#app')

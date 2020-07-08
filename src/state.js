@@ -1,8 +1,8 @@
-export default {
-  state: [],
-  mutations: {
-    addNotification (state, notification) {
-      state.push(notification)
-    }
-  }
-}
+// export default {
+//   state: [],
+//   mutations: {
+//     addNotification (state, notification) {
+//       state.push(notification)
+//     }
+//   }
+// }

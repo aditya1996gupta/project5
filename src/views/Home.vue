@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="home">
     <h1>Loading Vuex Modules Dynamically</h1>
     <HelloWorld msg="Welcome to Your Vue.js App"/><hr/>
@@ -20,4 +20,4 @@ export default {
     Formsubmission
   }
 }
-</script>
+</script> -->
